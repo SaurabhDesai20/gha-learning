@@ -1,11 +1,11 @@
-name: PR workflow
+name: Manual workflow
 
 on:
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   pre-check:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Pull request opened"
+      - run: echo "Manual workflow successful"

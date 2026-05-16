@@ -1,11 +1,11 @@
-name: First Workflow
+name: Manual workflow
 
-on: push
+on:
+  workflow_dispatch:
 
-jobs: 
-    hello-job:
-        runs-on: ubuntu-latest
+jobs:
+  pre-check:
+    runs-on: ubuntu-latest
 
-        steps: 
-            - name: Print greeting
-              run: echo "Hello Github Actions"
+    steps:
+      - run: echo "Manual workflow successful"

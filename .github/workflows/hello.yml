@@ -1,17 +1,20 @@
-name: Dependency Workflow
+name: Professional Workflow
 
 on: push
 
 jobs:
-  build:
+  first-job:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Building App"
+      - name: Checkout repository 
+        run: echo "Building App"
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
+      - name: Show files
+        run: ls
 
-    steps:
-      - run: echo "Deploying App"
+      - name: Print Current working directory
+        run: pwd
+
+      - name: Print Success message
+        run: echo "Wrokflow running successfully"

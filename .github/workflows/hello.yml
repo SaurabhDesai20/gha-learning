@@ -7,5 +7,14 @@ jobs:
         runs-on: ubuntu-latest
 
         steps: 
-            - name: Print greeting
-              run: echo "Hello Github Actions"
+            - name: Step 1
+              run: echo "Workflow starting"
+
+            - name: Step 2
+              run: pwd
+
+            - name: Step 3
+              run: ls
+
+            - name: Step 4
+              run: echo "Workflow Completed"

@@ -1,14 +1,11 @@
-name: Branch workflow
+name: PR workflow
 
 on:
-  push:
-    branches:
-      - main
-      - feature-learning
+  pull_request:
 
 jobs:
-  test-job:
+  pre-check:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Running only on main branch"
+      - run: echo "Pull request opened"

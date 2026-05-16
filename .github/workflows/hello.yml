@@ -1,20 +1,18 @@
-name: First Workflow
+name: Multi-Job Workflow
 
 on: push
 
-jobs: 
-    hello-job:
-        runs-on: ubuntu-latest
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
 
-        steps: 
-            - name: Step 1
-              run: echo "Workflow starting"
+    steps:
+      - name: Print Message
+        run: echo "This is job 1"
 
-            - name: Step 2
-              run: pwd
+  job-2:
+    runs-on: ubuntu-latest
 
-            - name: Step 3
-              run: ls
-
-            - name: Step 4
-              run: echo "Workflow Completed"
+    steps:
+      - name: Print Message
+        run: echo "This is Job 2"

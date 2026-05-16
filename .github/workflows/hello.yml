@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Checkout repository 
-        run: echo "Building App"
+        uses: actions/checkout@v4
 
       - name: Show files
         run: ls

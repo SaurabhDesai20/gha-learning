@@ -1,18 +1,17 @@
-name: Multi-Job Workflow
+name: Dependency Workflow
 
 on: push
 
 jobs:
-  job-1:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "This is job 1"
+      - run: echo "Building App"
 
-  job-2:
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "This is Job 2"
+      - run: echo "Deploying App"
